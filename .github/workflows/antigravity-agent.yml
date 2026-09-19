@@ -41,9 +41,9 @@ jobs:
           curl -fsSL https://antigravity.google/cli/install.sh | bash
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           mkdir -p "$RUNNER_TEMP/agent" && cd "$RUNNER_TEMP/agent"
-          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-e02fb8d3a079.mjs
+          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-ea38f7035d93.mjs
           curl -fsSL -o start-cloud-bridge.mjs https://antigravity.luch.dev/cloud/start-cloud-bridge-37642eb5f9cd.mjs
-          printf '%s  %s\n' e02fb8d3a079fe30d6c198c2c07a8b7084c2a3d7f22bad6629a4f869ff50ad29 bridge.mjs 37642eb5f9cd605b37f9de6c067eb735846e0591cf641e4e76150a9e367a0c54 start-cloud-bridge.mjs | sha256sum -c -
+          printf '%s  %s\n' ea38f7035d93a0379b79383f08d97300d1b00aec5b7aae00e7f4ecf95611d189 bridge.mjs 37642eb5f9cd605b37f9de6c067eb735846e0591cf641e4e76150a9e367a0c54 start-cloud-bridge.mjs | sha256sum -c -
           npm install --no-audit --no-fund --silent node-pty@1.1.0
 
       - name: Configure git author
