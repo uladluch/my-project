@@ -40,6 +40,30 @@
       "created_at": "2026-09-19T13:44:56.651Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "8fae5780-539e-4e93-b222-18faf93a6260",
+      "role": "agent",
+      "content": "Этот проект — современный адаптивный промо-лендинг, посвящённый дизайнерской породе собак **Кремовый мальтипу (Maltipoo Cream Edition)**.\n\n### 🌟 Что представляет собой проект:\n- **Тематика**: Презентация и бронирование щенков мальтипу редких кремовых оттенков (айвори, ванильный крем, персиковый, медовый бисквит).\n- **Стек**: Чистый фронтенд без тяжёлых сторонних библиотек — HTML5, CSS3, Vanilla JS.\n- **Языки**: Представлены версии на русском ([`index-ru.html`](https://github.com/uladluch/my-project/blob/main/index-ru.html)) и английском языках ([`index.html`](https://github.com/uladluch/my-project/blob/main/index.html)).\n\n### 🧩 Основные блоки и интерактив:\n1. **Интерактивная палитра окрасов** — выбор оттенка с автоматической передачей в форму заявки.\n2. **Галерея с фильтрацией** — фильтры по категориям (щенки, стрижки Teddy, лайфстайл).\n3. **Гид по уходу и грумингу** — вкладки с рекомендациями по расчёсыванию, купанию, гигиене глаз и стрижкам.\n4. **Квиз на совместимость** — интерактивный тест из 4 вопросов с подсчётом баллов и оценкой готовности к породе.\n5. **Форма заявки / бронирования** — с валидацией полей, всплывающими тост-уведомлениями и модальным окном подтверждения.\n6. **FAQ и отзывы владельцев** — раскрывающийся аккордеон с частыми вопросами и блок отзывов.\n\n### 📁 Структура файлов:\n- [`README.md`](https://github.com/uladluch/my-project/blob/main/README.md) — документация проекта.\n- [`index.html`](https://github.com/uladluch/my-project/blob/main/index.html) / [`index-en.html`](https://github.com/uladluch/my-project/blob/main/index-en.html) — англоязычная версия разметки.\n- [`index-ru.html`](https://github.com/uladluch/my-project/blob/main/index-ru.html) — русскоязычная версия разметки.\n- [`style.css`](https://github.com/uladluch/my-project/blob/main/style.css) — стили, анимации, адаптивная сетка и цветовая тема.\n- [`script.js`](https://github.com/uladluch/my-project/blob/main/script.js) — логика мобильного меню, фильтрации галереи, квиза, табов и модальных окон.\n- [`images/`](https://github.com/uladluch/my-project/blob/main/images) — фотографии щенков и процесса ухода.\n\nЕсли вам нужно что-то доработать, изменить стили или добавить новую функциональность — дайте знать!",
+      "status": "completed",
+      "model": "auto",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "39c92f48-2a85-47db-8ec3-a5d0b841792f",
+      "created_at": "2026-09-19T13:45:08.794Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    },
+    {
+      "id": "07ca45f2-3141-459b-ae9d-7bee694f29d3",
+      "role": "user",
+      "content": "Можно Ли добавить другие породы собак ?",
+      "status": "pending",
+      "model": "auto",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-09-19T13:58:41.959Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
