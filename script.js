@@ -1,11 +1,11 @@
 /**
- * Кремовый Мальтипу — Интерактивный функционал сайта
+ * Cream Maltipoo — Interactive Website Scripts
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ==========================================================================
-     1. Мобильное меню (Burger Toggle)
+     1. Mobile Menu (Burger Navigation)
      ========================================================================== */
   const burgerBtn = document.getElementById('burgerBtn');
   const mainNav = document.getElementById('mainNav');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerBtn.classList.toggle('active', isOpen);
     });
 
-    // Закрытие меню при клике по ссылке
+    // Close menu when a navigation link is clicked
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (mainNav.classList.contains('open')) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     2. Тень у шапки при скролле
+     2. Header Elevation on Scroll
      ========================================================================== */
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
@@ -43,14 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     3. Фильтрация в галерее
+     3. Gallery Filter
      ========================================================================== */
   const filterButtons = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Активный класс для кнопок
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -69,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     4. Переключение табов ухода (Care Tabs)
+     4. Care Guide Tabs
      ========================================================================== */
   const careTabs = document.querySelectorAll('.care-tab');
   const careContents = document.querySelectorAll('.care-tab-content');
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     5. Аккордеон (FAQ)
+     5. FAQ Accordion
      ========================================================================== */
   const accordionItems = document.querySelectorAll('.accordion-item');
 
@@ -97,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerBtn = item.querySelector('.accordion-header');
     const body = item.querySelector('.accordion-body');
 
-    // Инициализация активного состояния
     if (item.classList.contains('active') && body) {
       body.style.maxHeight = body.scrollHeight + 'px';
     }
@@ -105,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     headerBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Закрываем другие элементы аккордеона
+      // Close other accordion panels
       accordionItems.forEach(otherItem => {
         otherItem.classList.remove('active');
         const otherBtn = otherItem.querySelector('.accordion-header');
@@ -123,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     6. Интерактивный тест (Quiz)
+     6. Interactive Match Quiz
      ========================================================================== */
   const quizSteps = document.querySelectorAll('.quiz-step');
   const progressBar = document.getElementById('quizProgressBar');
@@ -153,7 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateQuizProgress();
   }
 
-  // Клик по вариантам ответа
   document.querySelectorAll('.quiz-opt-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const points = parseInt(btn.getAttribute('data-points')) || 2;
@@ -163,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentStep++;
         showStep(currentStep);
       } else {
-        // Показываем результат
         quizSteps.forEach(step => step.classList.remove('active'));
         if (progressBar) progressBar.style.width = '100%';
         if (quizResult) {
@@ -178,14 +174,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!resultTitle || !resultDesc) return;
 
     if (score >= 10) {
-      resultTitle.textContent = 'Идеальное совпадение: 99%!';
-      resultDesc.textContent = 'Кремовый мальтипу создан именно для вас! Ваша забота, домашний уют и готовность дарить любовь сделают этого малыша самым счастливым членом семьи.';
+      resultTitle.textContent = '99% Match: Ideal Companion!';
+      resultDesc.textContent = 'A Cream Maltipoo is your absolute dream match! Your lifestyle and warmth will give this affectionate pup the happiest forever home.';
     } else if (score >= 7) {
-      resultTitle.textContent = 'Отличная совместимость: 85%!';
-      resultDesc.textContent = 'Вам прекрасно подойдет мальтипу со спокойным и уравновешенным характером. Мы с удовольствием поможем подобрать щенка с подходящим темпераментом.';
+      resultTitle.textContent = '85% Match: Wonderful Compatibility!';
+      resultDesc.textContent = 'A gentle, relaxed maltipoo will suit your home beautifully. We will happily help select a puppy with the perfect temperament for your lifestyle.';
     } else {
-      resultTitle.textContent = 'Хорошая совместимость: 70%!';
-      resultDesc.textContent = 'Мальтипу требует ежедневного внимания и общения. Рекомендуем проконсультироваться с кинологом нашего клуба перед окончательным решением.';
+      resultTitle.textContent = '70% Match: Great Potential!';
+      resultDesc.textContent = 'Maltipoos thrive on daily affection and attention. We recommend consulting with our breed specialist to find the ideal routine.';
     }
   }
 
@@ -199,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     7. Форма бронирования и валидация
+     7. Booking / Inquiry Form Validation & Modal
      ========================================================================== */
   const bookingForm = document.getElementById('bookingForm');
   const userName = document.getElementById('userName');
@@ -213,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       let isValid = true;
 
-      // Проверка имени
+      // Validate Name
       if (!userName.value.trim()) {
         userName.parentElement.classList.add('has-error');
         isValid = false;
@@ -221,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userName.parentElement.classList.remove('has-error');
       }
 
-      // Проверка телефона
+      // Validate Phone
       const phoneVal = userPhone.value.trim();
       const phoneRegex = /^[\d\+\(\)\s\-]{7,20}$/;
       if (!phoneRegex.test(phoneVal)) {
@@ -232,14 +228,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isValid) {
-        // Успешная отправка
         openModal();
         bookingForm.reset();
-        showToast('Заявка успешно принята! Мы скоро напишем вам.');
+        showToast('Inquiry submitted successfully! We will contact you shortly.');
       }
     });
 
-    // Сброс ошибок при вводе
     userName.addEventListener('input', () => {
       if (userName.value.trim()) {
         userName.parentElement.classList.remove('has-error');
@@ -285,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     8. Уведомления Toast
+     8. Toast Notification Utility
      ========================================================================== */
   const toast = document.getElementById('toast');
 
@@ -300,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==========================================================================
-     9. Карточки оттенков: интерактивный выбор
+     9. Interactive Shade Swatches: Form Sync
      ========================================================================== */
   const colorCards = document.querySelectorAll('.color-card');
   const pupShadeSelect = document.getElementById('pupShade');
@@ -318,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (shade === 'biscuit') pupShadeSelect.value = 'biscuit';
       }
 
-      showToast(`Выбран оттенок: ${card.querySelector('.color-title').textContent}`);
+      showToast(`Selected shade: ${card.querySelector('.color-title').textContent}`);
     });
   });
 

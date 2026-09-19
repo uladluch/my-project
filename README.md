@@ -1,36 +1,36 @@
-# 🐾 Кремовый Мальтипу (Maltipoo Cream Edition)
+# 🐾 Cream Maltipoo (Maltipoo Cream Edition)
 
-Современный, стильный и адаптивный веб-проект (HTML5 / CSS3 / Vanilla JS), посвященный одной из самых популярных и очаровательных дизайнерских пород собак — **кремовому мальтипу**.
-
----
-
-## 🌟 Особенности проекта
-
-- **Тематическая эстетика**: Нежная сливочно-кофейная и персиковая цветовая палитра (`#FCF9F2`, `#B87640`, `#F6D8C4`), типографика с засечками для заголовков (*Cormorant Garamond*) и современный гротеск для текста (*Plus Jakarta Sans*).
-- **Интерактивные разделы**:
-  - 🧸 **Hero-блок** с плавающими бейджами достоинств породы и быстрым переходом к бронированию.
-  - 📊 **Быстрые факты**: Рост, вес, продолжительность жизни и гипоаллергенные свойства.
-  - 🧬 **О породе**: Генетика родителей (мальтийская болонка + той-пудель) и преимущества поколения F1.
-  - 🎨 **Палитра оттенков крема**: Интерактивные карточки оттенков (Айвори, Ванильный крем, Персиковый крем, Абрикосовый бисквит) с автоматической синхронизацией с формой заявки.
-  - 📸 **Галерея с фильтрами**: Сортировка по категориям («Малыши», «Стрижки Тедди», «Лайфстайл»).
-  - 🛁 **Гид по уходу и грумингу**: Вкладки с советами по расчёсыванию, купанию, уходу за глазками и стрижке Teddy Bear.
-  - 🎯 **Интерактивный тест (Quiz)**: 4 вопроса с динамическим расчетом совместимости («Подходит ли вам мальтипу?»).
-  - 💬 **Отзывы владельцев**: Карточки с рейтингом 5 звезд и реальным опытом содержания.
-  - ❓ **FAQ-аккордеон**: Ответы на частые вопросы (линька, документы, привыкание к дому).
-  - 📝 **Форма бронирования**: Валидация данных, модальное окно успешной отправки и уведомления Toast.
-- **Полная адаптивность**: Одинаково великолепно выглядит на смартфонах, планшетах и настольных экранах.
-- **Чистый код**: Без тяжелых внешних библиотек (Vanilla JS), быстрая загрузка и плавная анимация.
+A modern, responsive, and aesthetic landing page project (HTML5 / CSS3 / Vanilla JS) dedicated to one of the most cherished designer dog breeds — the **Cream Maltipoo**.
 
 ---
 
-## 📁 Структура проекта
+## 🌟 Project Highlights
+
+- **Thematic Aesthetic**: Warm cream, ivory, vanilla, and honey-caramel color palette (`#FCF9F2`, `#B87640`, `#F6D8C4`), featuring elegant editorial serif headings (*Cormorant Garamond*) paired with geometric sans body typography (*Plus Jakarta Sans*).
+- **Interactive Sections**:
+  - 🧸 **Hero Banner** with floating feature tags and quick reservation CTA.
+  - 📊 **Quick Facts Bar**: Height, weight, lifespan, and hypoallergenic qualities.
+  - 🧬 **About the Breed**: Pedigree breakdown (Maltese + Toy Poodle) and advantages of the F1 generation.
+  - 🎨 **Shades of Cream Palette**: Interactive cards for Ivory, Vanilla Cream, Peach Cream, and Honey Biscuit that automatically sync with the inquiry form.
+  - 📸 **Filterable Photo Gallery**: Real photos filtered by category (Puppies under 3 mo, Teddy Cuts, Lifestyle).
+  - 🛁 **Care & Grooming Guide**: Interactive tabbed guide covering daily brushing, bathing cosmetics, tear-stain prevention, and teddy styling.
+  - 🎯 **Interactive Compatibility Quiz**: 4-question interactive quiz with animated progress and real-time score matching.
+  - 💬 **Owner Reviews**: 5-star testimonials with owner details.
+  - ❓ **FAQ Accordion**: Smoothly expanding answers to key owner questions (generations, shedding, age stability).
+  - 📝 **Inquiry & Reservation Form**: Built-in input validation, feedback toast notifications, and an aesthetic confirmation modal.
+- **Fully Responsive**: Optimized for mobile phones, tablets, and desktop displays.
+- **Zero Heavy Dependencies**: Pure semantic HTML5, modern CSS3, and lightweight Vanilla JS for instant loading and 60fps animations.
+
+---
+
+## 📁 Project Structure
 
 ```text
 my-project/
-├── index.html        # Основная разметка страницы (HTML5)
-├── style.css         # Стили, адаптивная сетка, анимации (CSS3)
-├── script.js         # Интерактивный функционал: табы, квиз, модалки, фильтры
-├── images/           # Фотографии щенков и ухода
+├── index.html        # Main semantic HTML5 markup (in English)
+├── style.css         # Responsive styling, CSS variables & animations
+├── script.js         # Interactive features: menu, tabs, quiz, modal & toast
+├── images/           # Puppy, lifestyle, and grooming photos
 │   ├── puppy-hero.jpg
 │   ├── puppy-teddy.jpg
 │   ├── puppy-cream.jpg
@@ -39,19 +39,19 @@ my-project/
 │   ├── puppy-2.jpg
 │   ├── puppy-3.jpg
 │   └── puppy-4.jpg
-└── README.md         # Документация проекта
+└── README.md         # Project documentation
 ```
 
 ---
 
-## 🚀 Как запустить проект
+## 🚀 How to Run
 
-1. **Простой способ**:
-   Дважды кликните на файл `index.html` или откройте его через любой современный браузер (Chrome, Safari, Firefox, Edge).
+1. **Directly in Browser**:
+   Double-click `index.html` or open it in any modern web browser (Chrome, Safari, Firefox, Edge).
 
-2. **Через локальный сервер (рекомендуется)**:
+2. **Using a Local Server (Recommended)**:
    ```bash
-   # Используя Python 3
+   # Using Python 3
    python3 -m http.server 8000
    ```
-   Затем откройте в браузере: [http://localhost:8000](http://localhost:8000)
+   Then navigate to: [http://localhost:8000](http://localhost:8000)
