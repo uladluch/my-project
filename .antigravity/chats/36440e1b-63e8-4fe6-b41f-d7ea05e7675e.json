@@ -16,6 +16,30 @@
       "created_at": "2026-09-19T13:44:37.862Z",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "470c0145-f93b-4a18-82bc-b3b2bb19f332",
+      "role": "agent",
+      "content": "Hello! How can I help you with your project today?",
+      "status": "completed",
+      "model": "auto",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "1745e0fb-42d9-4360-9ce8-e7345c9064b4",
+      "created_at": "2026-09-19T13:44:42.967Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    },
+    {
+      "id": "39c92f48-2a85-47db-8ec3-a5d0b841792f",
+      "role": "user",
+      "content": "О чем этот проект",
+      "status": "pending",
+      "model": "auto",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-09-19T13:44:56.651Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
