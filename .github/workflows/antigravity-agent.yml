@@ -41,15 +41,27 @@ jobs:
           curl -fsSL https://antigravity.google/cli/install.sh | bash
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           mkdir -p "$RUNNER_TEMP/agent" && cd "$RUNNER_TEMP/agent"
-          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-a6b1a625801f.mjs
+          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-9efb2a830e3b.mjs
           curl -fsSL -o start-cloud-bridge.mjs https://antigravity.luch.dev/cloud/start-cloud-bridge-37642eb5f9cd.mjs
-          printf '%s  %s\n' a6b1a625801ff5390d2be7d3793bad16bc8a64a8ae644e60a3dc023c9a9c5204 bridge.mjs 37642eb5f9cd605b37f9de6c067eb735846e0591cf641e4e76150a9e367a0c54 start-cloud-bridge.mjs | sha256sum -c -
+          printf '%s  %s\n' 9efb2a830e3b8eadf31682b6a372834294eccf9ea682dc97c111375f3d38ac95 bridge.mjs 37642eb5f9cd605b37f9de6c067eb735846e0591cf641e4e76150a9e367a0c54 start-cloud-bridge.mjs | sha256sum -c -
           npm install --no-audit --no-fund --silent node-pty@1.1.0
 
       - name: Configure git author
         run: |
           git config user.name "Antigravity Agent"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # The app keeps your Google sign-in on your phone and hands it to this
+      # repository as a secret, so the agent doesn't ask you to sign in again.
+      - name: Restore Google sign-in
+        env:
+          GOOGLE_SIGN_IN: ${{ secrets.ANTIGRAVITY_GOOGLE_SIGN_IN }}
+        run: |
+          if [ -n "$GOOGLE_SIGN_IN" ]; then
+            umask 077
+            mkdir -p "$HOME/.gemini/antigravity-cli"
+            printf '%s' "$GOOGLE_SIGN_IN" | base64 -d > "$HOME/.gemini/antigravity-cli/antigravity-oauth-token"
+          fi
 
       - name: Run agent
         env:
