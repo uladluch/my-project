@@ -88,6 +88,30 @@
       "created_at": "2026-09-19T08:12:23.889+00:00",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "b5f4e03c-fadc-4ac8-8699-e1dc13f66589",
+      "role": "agent",
+      "content": "Проект полностью переведён на английский язык! 🐾\n\n### 📁 Обновлённые файлы проекта:\n- [**`index.html`**](https://github.com/uladluch/my-project/blob/main/index.html) — вся разметка, заголовки, тексты, форма и мета-теги переведены на английский язык (`lang=\"en\"`).\n- [**`script.js`**](https://github.com/uladluch/my-project/blob/main/script.js) — интерактивные уведомления (toast), подсчет результатов теста-квиза и валидация формы на английском.\n- [**`style.css`**](https://github.com/uladluch/my-project/blob/main/style.css) — адаптивные стили в эстетичной кремово-ванильной гамме с шрифтами *Cormorant Garamond* и *Plus Jakarta Sans*.\n- [**`README.md`**](https://github.com/uladluch/my-project/blob/main/README.md) — актуализированная документация на английском языке.\n- [**`images/`**](https://github.com/uladluch/my-project/blob/main/images/) — качественные фотографии щенков и ухода.\n\n### 🚀 Запуск:\nОткройте [**`index.html`**](https://github.com/uladluch/my-project/blob/main/index.html) в браузере или запустите локальный сервер:\n```bash\npython3 -m http.server 8000\n```\nи перейдите по адресу `http://localhost:8000`.\n\n✓ Saved to GitHub: https://github.com/uladluch/my-project/commit/f505f6d",
+      "status": "completed",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "1a8a456c-484f-440f-a616-e4ed4108b444",
+      "created_at": "2026-09-19T08:13:16.021Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    },
+    {
+      "id": "76177b8e-f590-4f14-ad40-40d9e75eec8e",
+      "role": "user",
+      "content": "А не верни обратно на англ",
+      "status": "pending",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-09-19T08:14:25.645+00:00",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
