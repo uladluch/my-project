@@ -40,6 +40,30 @@
       "created_at": "2026-09-19T08:06:25.9+00:00",
       "sender": "ios",
       "is_cancelled": false
+    },
+    {
+      "id": "314369f4-ea1e-4815-8861-c66ebdda397d",
+      "role": "agent",
+      "content": "I'm doing well, thank you! How can I help you today?\n\n✓ Saved to GitHub: https://github.com/uladluch/my-project/commit/1429925",
+      "status": "completed",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "680a44a8-4769-4cad-b6cb-356e5b6f43ab",
+      "created_at": "2026-09-19T08:06:31.638Z",
+      "sender": "macOS",
+      "is_cancelled": false
+    },
+    {
+      "id": "f478e739-ae05-459b-8466-de4d69edb964",
+      "role": "user",
+      "content": "Сделай страницу про мальтипу кремого нужен html css проект",
+      "status": "pending",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-09-19T08:07:54.986+00:00",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
