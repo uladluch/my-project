@@ -124,6 +124,18 @@
       "created_at": "2026-09-19T09:26:36.914Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "138792c3-2b0a-483f-ac49-829499a46bde",
+      "role": "agent",
+      "content": "One quick step before we start: connect your Google account. The agent runs on your own Google plan, so there's nothing to pay and no keys to paste.\n\n1. [Sign in with Google](https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=1071006060591-tmhssin2h21lcre235vtolojh4g403ep.apps.googleusercontent.com&code_challenge=4s9tJqenVvCCF0rc3SIf-yphUSVnOodfJJwcj2uJHa4&code_challenge_method=S256&prompt=consent&redirect_uri=https%3A%2F%2Fantigravity.google%2Foauth-callback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcclog+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fexperimentsandconfigs+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faicode+openid&state=VJUAOxS5sDIzWJ25W469GQ)\n2. Copy the code Google shows you\n3. Paste it here\n\nThe link is good for 60 seconds. If it runs out, send any message and you'll get a new one.",
+      "status": "completed",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "d35f1d47-3c32-42f5-ab85-c0852e5625c6",
+      "created_at": "2026-09-19T09:26:48.790Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }
