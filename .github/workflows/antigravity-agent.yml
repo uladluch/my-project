@@ -5,6 +5,9 @@ name: Antigravity Agent
 
 on:
   workflow_dispatch:
+    # Only older app versions send these; the current app hands the agent its
+    # connection as the ANTIGRAVITY_RELAY secret instead, which GitHub masks
+    # (inputs are printed in the run log, public for public repositories).
     inputs:
       pair:
         description: Pairing id created by the Antigravity app
@@ -28,11 +31,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      # Pinned to commits: a tag can be moved, a commit can't.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22
 
@@ -41,9 +45,9 @@ jobs:
           curl -fsSL https://antigravity.google/cli/install.sh | bash
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           mkdir -p "$RUNNER_TEMP/agent" && cd "$RUNNER_TEMP/agent"
-          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-ea38f7035d93.mjs
-          curl -fsSL -o start-cloud-bridge.mjs https://antigravity.luch.dev/cloud/start-cloud-bridge-37642eb5f9cd.mjs
-          printf '%s  %s\n' ea38f7035d93a0379b79383f08d97300d1b00aec5b7aae00e7f4ecf95611d189 bridge.mjs 37642eb5f9cd605b37f9de6c067eb735846e0591cf641e4e76150a9e367a0c54 start-cloud-bridge.mjs | sha256sum -c -
+          curl -fsSL -o bridge.mjs https://antigravity.luch.dev/cloud/bridge-3a29986f4f63.mjs
+          curl -fsSL -o start-cloud-bridge.mjs https://antigravity.luch.dev/cloud/start-cloud-bridge-e9189556a93e.mjs
+          printf '%s  %s\n' 3a29986f4f63419568a5c9bdb2cd8e3b6b2fb09648e5c1bbbb8ae52a3b2fd6b1 bridge.mjs e9189556a93e717078e9927b126b9b74b2c12763d883ac38c39d4f8e978d8eaf start-cloud-bridge.mjs | sha256sum -c -
           npm install --no-audit --no-fund --silent node-pty@1.1.0
 
       - name: Configure git author
@@ -65,6 +69,7 @@ jobs:
 
       - name: Run agent
         env:
+          ANTIGRAVITY_RELAY: ${{ secrets.ANTIGRAVITY_RELAY }}
           ANTIGRAVITY_PAIR_ID: ${{ inputs.pair }}
           ANTIGRAVITY_PAIR_TOKEN: ${{ inputs.token }}
           ANTIGRAVITY_PAIR_EXPIRES: ${{ inputs.expires }}
