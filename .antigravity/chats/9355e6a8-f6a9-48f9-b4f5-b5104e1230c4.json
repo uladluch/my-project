@@ -16,6 +16,18 @@
       "created_at": "2026-09-19T08:06:01.759Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "9d546f0e-fc1f-44d2-89f2-7db9fde70ffb",
+      "role": "agent",
+      "content": "[GOOGLE_SIGNED_IN] You're signed in to Google. Send your request again and I'll get to work.",
+      "status": "completed",
+      "model": "gemini-2.5-flash",
+      "client_type": "gemini-bridge",
+      "parent_message_id": "101fc67f-c25e-44e9-86c2-f0071ac6216e",
+      "created_at": "2026-09-19T08:06:20.140Z",
+      "sender": "macOS",
+      "is_cancelled": false
     }
   ]
 }
