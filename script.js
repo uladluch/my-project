@@ -1,8 +1,11 @@
 /**
- * Cream Maltipoo — Interactive Website Scripts
+ * Cream Maltipoo / Кремовый Мальтипу
+ * Interactive Website Scripts with Multilingual Support (RU / EN)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  const isRu = (document.documentElement.lang || '').toLowerCase().startsWith('ru');
 
   /* ==========================================================================
      1. Mobile Menu (Burger Navigation)
@@ -18,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       burgerBtn.classList.toggle('active', isOpen);
     });
 
-    // Close menu when a navigation link is clicked
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (mainNav.classList.contains('open')) {
@@ -103,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     headerBtn.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
 
-      // Close other accordion panels
       accordionItems.forEach(otherItem => {
         otherItem.classList.remove('active');
         const otherBtn = otherItem.querySelector('.accordion-header');
@@ -174,14 +175,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!resultTitle || !resultDesc) return;
 
     if (score >= 10) {
-      resultTitle.textContent = '99% Match: Ideal Companion!';
-      resultDesc.textContent = 'A Cream Maltipoo is your absolute dream match! Your lifestyle and warmth will give this affectionate pup the happiest forever home.';
+      if (isRu) {
+        resultTitle.textContent = 'Идеальное совпадение: 99%!';
+        resultDesc.textContent = 'Кремовый мальтипу создан именно для вас! Ваша забота, домашний уют и готовность дарить любовь сделают этого малыша самым счастливым членом семьи.';
+      } else {
+        resultTitle.textContent = '99% Match: Ideal Companion!';
+        resultDesc.textContent = 'A Cream Maltipoo is your absolute dream match! Your lifestyle and warmth will give this affectionate pup the happiest forever home.';
+      }
     } else if (score >= 7) {
-      resultTitle.textContent = '85% Match: Wonderful Compatibility!';
-      resultDesc.textContent = 'A gentle, relaxed maltipoo will suit your home beautifully. We will happily help select a puppy with the perfect temperament for your lifestyle.';
+      if (isRu) {
+        resultTitle.textContent = 'Отличная совместимость: 85%!';
+        resultDesc.textContent = 'Вам прекрасно подойдет мальтипу со спокойным и уравновешенным характером. Мы с удовольствием поможем подобрать щенка с подходящим темпераментом.';
+      } else {
+        resultTitle.textContent = '85% Match: Wonderful Compatibility!';
+        resultDesc.textContent = 'A gentle, relaxed maltipoo will suit your home beautifully. We will happily help select a puppy with the perfect temperament for your lifestyle.';
+      }
     } else {
-      resultTitle.textContent = '70% Match: Great Potential!';
-      resultDesc.textContent = 'Maltipoos thrive on daily affection and attention. We recommend consulting with our breed specialist to find the ideal routine.';
+      if (isRu) {
+        resultTitle.textContent = 'Хорошая совместимость: 70%!';
+        resultDesc.textContent = 'Мальтипу требует ежедневного внимания и общения. Рекомендуем проконсультироваться с кинологом нашего клуба перед окончательным решением.';
+      } else {
+        resultTitle.textContent = '70% Match: Great Potential!';
+        resultDesc.textContent = 'Maltipoos thrive on daily affection and attention. We recommend consulting with our breed specialist to find the ideal routine.';
+      }
     }
   }
 
@@ -230,7 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isValid) {
         openModal();
         bookingForm.reset();
-        showToast('Inquiry submitted successfully! We will contact you shortly.');
+        showToast(
+          isRu 
+            ? 'Заявка успешно принята! Мы скоро свяжемся с вами.'
+            : 'Inquiry submitted successfully! We will contact you shortly.'
+        );
       }
     });
 
@@ -312,7 +332,8 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (shade === 'biscuit') pupShadeSelect.value = 'biscuit';
       }
 
-      showToast(`Selected shade: ${card.querySelector('.color-title').textContent}`);
+      const shadeTitle = card.querySelector('.color-title').textContent;
+      showToast(isRu ? `Выбран оттенок: ${shadeTitle}` : `Selected shade: ${shadeTitle}`);
     });
   });
 
